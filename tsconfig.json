@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib/commonjs",
+    "strict": true,
+    "target": "ES2018"
+  },
+  "include": ["src", "test/test.ts"],
+  "exclude": ["node_modules", "test/test.ts"]
+}

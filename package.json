@@ -1,0 +1,48 @@
+{
+  "name": "cat-mer-calculator",
+  "version": "1.0.0",
+  "description": "The Cat MER Calculator is a software library designed to calculate the daily energy requirements (MER - Maintenance Energy Requirements) for cats.",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/esm5/index.js",
+  "es2015": "./lib/esm2015/index.js",
+  "typings": "./lib/types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:commonjs && npm run build:es2015 && npm run build:esm5 && npm run build:types",
+    "build:commonjs": "tsc --module commonjs --target es2018 --outDir ./lib/commonjs",
+    "build:es2015": "tsc --module ES2015 --target es2015 --outDir ./lib/es2015",
+    "build:esm5": "tsc --module ES2015 --target ES5 --outDir ./lib/esm5",
+    "build:types": "tsc --target es2018 --declaration --emitDeclarationOnly --outDir ./lib/types",
+    "bundle": "parcel build src/web.ts",
+    "test": "ts-node src/test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huiskatteninfo/CatMerCalculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Huiskatteninfo/CatMerCalculator/issues"
+  },
+  "keywords": [
+    "cat",
+    "maintenance",
+    "energy",
+    "requirments",
+    "mer",
+    "calculator",
+    "mer",
+    "calulator",
+    "cat",
+    "mer"
+  ],
+  "author": "huiskatteninfo.nl",
+  "license": "MIT",
+  "homepage": "https://huiskatteninfo.nl/software/cat-mer-calculator/",
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^5.0.4",
+    "ts-node": "^10.9.1"
+  }
+}
