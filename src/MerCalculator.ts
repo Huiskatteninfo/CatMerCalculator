@@ -29,7 +29,7 @@ export class MerCalculator {
         }
         }
     
-        return Math.round(energyRequirement);
+        return energyRequirement;
     }
     
     /**
@@ -64,7 +64,7 @@ export class MerCalculator {
         else if(age < 12) {
             energyRequirement *= 1.5;
         }
-        return Math.round(energyRequirement);
+        return energyRequirement;
     }
 
     /**
@@ -127,7 +127,7 @@ export class MerCalculator {
             recommendedCalories = this.calculateEnergyRequirements(weight, ageInMonths, peculiarities==='neutered', activity==='active');
           }
       
-          recommendedCaloriesSpan.textContent = recommendedCalories.toFixed(2);
+          recommendedCaloriesSpan.textContent = recommendedCalories.toFixed(0);
         }
       
         // Create the weight input field
@@ -217,6 +217,7 @@ export class MerCalculator {
         const recommendedCaloriesSpan = document.createElement('span');
         recommendedCaloriesDiv.appendChild(recommendedCaloriesText);
         recommendedCaloriesDiv.appendChild(recommendedCaloriesSpan);
+        recommendedCaloriesDiv.append(" Kcal");
         element.appendChild(recommendedCaloriesDiv);
         
         // Initialize the recommended calories

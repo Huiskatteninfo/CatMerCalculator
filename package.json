@@ -1,6 +1,6 @@
 {
   "name": "cat-mer-calculator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The Cat MER Calculator is a software library designed to calculate the daily energy requirements (MER - Maintenance Energy Requirements) for cats.",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm5/index.js",
