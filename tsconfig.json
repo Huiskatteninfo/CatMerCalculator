@@ -4,6 +4,6 @@
     "strict": true,
     "target": "ES2018"
   },
-  "include": ["src", "test/test.ts"],
+  "include": ["src", "test/test.ts", "test/web.ts"],
   "exclude": ["node_modules", "test/test.ts"]
 }

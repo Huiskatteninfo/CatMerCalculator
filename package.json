@@ -1,6 +1,6 @@
 {
   "name": "cat-mer-calculator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Cat MER Calculator is a software library designed to calculate the daily energy requirements (MER - Maintenance Energy Requirements) for cats.",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm5/index.js",
@@ -12,8 +12,8 @@
     "build:es2015": "tsc --module ES2015 --target es2015 --outDir ./lib/es2015",
     "build:esm5": "tsc --module ES2015 --target ES5 --outDir ./lib/esm5",
     "build:types": "tsc --target es2018 --declaration --emitDeclarationOnly --outDir ./lib/types",
-    "bundle": "parcel build src/web.ts",
-    "test": "ts-node src/test.ts"
+    "bundle": "parcel build src/MerCalculator.ts --no-minify --global MerCalculator",
+    "test": "ts-node test/test.ts"
   },
   "repository": {
     "type": "git",
